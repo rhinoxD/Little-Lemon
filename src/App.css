@@ -1,38 +1,239 @@
-.App {
+body {
+  background-color: #181a1b;
+  color: #e8e6e3;
+  /* font-family: 'Markazi Text', 'serif'; */
+  font-family: 'Karla', sans-serif;
+  margin: 3rem 5%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+header > img {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+nav {
+  background-color: rgb(58, 75, 70);
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-inline-start: 0;
+  margin-bottom: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 1rem;
+}
+
+a {
+  color: #e8e6e3;
+  text-decoration: none;
+}
+
+#special_offer {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url('./assets/new/restaurant_inside.jpg');
+  color: rgb(232, 230, 227);
+  background-size: cover;
+  background-position: 75%;
+  color: white;
+  min-height: 200px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#special_offer p {
+  text-shadow: rgb(38, 42, 43) 2px 2px 4px;
+  font-size: 1.5rem;
+  margin: 0.8rem 0 0 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
+  display: flex;
+  gap: 2rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-direction: row;
+}
+
+button {
+  background-color: transparent;
+  color: rgba(232, 230, 227, 0.9);
+  border-color: rgb(48, 52, 54);
+  outline-color: currentcolor;
+  text-decoration-color: currentcolor;
+  display: inline-block;
+  width: 20%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 8px;
+  border: 3px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(58, 75, 70);
+}
+
+main article {
+  border: 1px solid rgb(53, 57, 59);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+article {
+  flex: 1;
+}
+
+article img {
+  width: 100%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+#tabs a {
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(238, 151, 111);
+}
+
+#tabs ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.col {
+  flex-basis: 50%;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.col figure {
+  padding: 0 12px;
+}
+
+.col a {
+  color: rgb(238, 151, 111);
+}
+
+.menu-price {
+  display: block;
+  font-size: 1rem;
+}
+
+.figure {
+  margin: 0;
+}
+
+p,
+ul {
+  font-size: 1.25rem;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+.book {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.book .row {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.book .col {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book input {
+  margin: auto;
+}
+
+#button {
+  border-color: rgb(112, 104, 92);
+  background-color: rgb(58, 75, 70);
+  color: rgb(232, 230, 227);
+  padding: 0.5rem 1rem;
+  border: 1px solid #495e57;
+  background-color: #495e57;
+  border-radius: 5px;
+  width: 80%;
+  font-size: 1.25rem;
+  display: block;
+  color: #fff;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+input {
+  width: 80%;
+  display: block;
+  padding: 0.5rem 1rem;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+}
+
+footer {
+  display: flex;
+  background-color: rgb(34, 36, 38);
+  padding: 1rem;
+  gap: 2rem 1rem;
+}
+
+footer img {
+  width: 50px;
+}
+
+footer p {
+  border-color: rgb(123, 114, 101);
+  border-top: #333333;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  text-align: right;
+  padding-top: 1rem;
 }
