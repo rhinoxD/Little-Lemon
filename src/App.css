@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #181a1b;
   color: #e8e6e3;
@@ -217,6 +223,7 @@ input {
 
 footer {
   display: flex;
+  align-items: center;
   background-color: rgb(34, 36, 38);
   padding: 1rem;
   gap: 2rem 1rem;
@@ -236,4 +243,22 @@ footer p {
   border-right: none;
   text-align: right;
   padding-top: 1rem;
+}
+
+@media (max-width: 420px) {
+  header > img {
+    display: block;
+    margin: auto;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    width: 80%;
+  }
+  nav ul {
+    font-size: 1rem;
+  }
+  footer p {
+    width: 120%;
+    font-size: 1rem;
+    transform: translateX(-18%);
+  }
 }
