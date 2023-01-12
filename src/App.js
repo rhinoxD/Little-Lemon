@@ -14,7 +14,6 @@ import Reservations from './components/Reservations'
 function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Nav />
       <Routes>
         <Route path='/' element={<Home />} />
