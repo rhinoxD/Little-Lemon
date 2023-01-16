@@ -389,6 +389,11 @@ footer p {
   padding-top: 1rem;
 }
 
+.form {
+  color: #000;
+  margin: 2rem 9.6rem;
+}
+
 @media (max-width: 420px) {
   header > img {
     display: block;

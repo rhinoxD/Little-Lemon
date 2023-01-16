@@ -2,9 +2,9 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 import './App.css'
 import About from './components/About'
+import BookingPage from './components/BookingPage'
 import Home from './components/Home'
 import Footer from './components/Layout/Footer'
-import Header from './components/Layout/Header'
 import Nav from './components/Layout/Nav'
 import Login from './components/Login'
 import Menu from './components/Menu'
@@ -22,6 +22,7 @@ function App() {
         <Route path='/reservations' element={<Reservations />} />
         <Route path='/order-online' element={<OrderOnline />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/booking' element={<BookingPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

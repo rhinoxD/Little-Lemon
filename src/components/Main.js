@@ -5,6 +5,7 @@ import greekSalad from '../assets/greek salad.jpg'
 import bruschetta from '../assets/bruchetta.svg'
 import lemonDessert from '../assets/lemon dessert.jpg'
 import scooter from '../assets/scooter.svg'
+import { Link } from 'react-router-dom'
 
 const Main = () => {
   return (
@@ -17,7 +18,7 @@ const Main = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </h5>
-          <button className='btn'>Reserve a Table</button>
+          <button className='btn'><Link to='/booking'>Reserve a Table</Link></button>
         </div>
         <div className='content-image'>
           <img src={contentImage} alt='restaurant-food' />
