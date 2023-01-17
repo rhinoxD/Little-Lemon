@@ -1,24 +1,16 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
-const BookingForm = () => {
+const BookingForm = ({ availableTimes, dispatch }) => {
   const [date, setDate] = useState('')
-  const [availableTimes, setAvailableTimes] = useState([
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00',
-  ])
   const [time, setTime] = useState('')
   const [guests, setGuests] = useState(1)
   const [occasion, setOccasion] = useState('')
+  const ref = useRef()
   const handleDate = (e) => {
     // console.log(e.target.value)
     setDate(e.target.value)
   }
   const handleTime = (e) => {
-    // console.log(e.target.value)
     setTime(e.target.value)
   }
   const handleGuests = (e) => {
@@ -31,23 +23,28 @@ const BookingForm = () => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
+    setDate('')
+    ref.current.value = ''
+    dispatch({ type: time })
     console.log(date, time, guests, occasion)
   }
   return (
     <div className='form'>
       <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
         <label htmlFor='res-date'>Choose date</label>
-        <input type='date' id='res-date' onChange={handleDate} />
+        <input type='date' id='res-date' onChange={handleDate} value={date} />
         <label htmlFor='res-time'>Choose time</label>
         <select id='res-time ' onChange={handleTime}>
-          {availableTimes.map((avlTime) => (
-            <option key={avlTime}>{avlTime}</option>
-          ))}
+          {availableTimes &&
+            availableTimes.map((avlTime) => (
+              <option key={avlTime}>{avlTime}</option>
+            ))}
         </select>
         <label htmlFor='guests'>Number of guests</label>
         <input
           type='number'
           placeholder='1'
+          ref={ref}
           min='1'
           max='10'
           id='guests'

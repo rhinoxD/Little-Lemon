@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 
 import contentImage from '../assets/restauranfood.jpg'
 import greekSalad from '../assets/greek salad.jpg'
@@ -18,7 +18,9 @@ const Main = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </h5>
-          <button className='btn'><Link to='/booking'>Reserve a Table</Link></button>
+          <button className='btn'>
+            <Link to='/booking'>Reserve a Table</Link>
+          </button>
         </div>
         <div className='content-image'>
           <img src={contentImage} alt='restaurant-food' />
