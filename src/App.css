@@ -389,9 +389,13 @@ footer p {
   padding-top: 1rem;
 }
 
-.form {
+.booking-form {
   color: #000;
   margin: 2rem 9.6rem;
+}
+
+.booking-form h1 {
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 420px) {
