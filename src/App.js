@@ -4,6 +4,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import './App.css'
 import About from './components/About'
 import BookingPage from './components/BookingPage'
+import ConfirmedBooking from './components/ConfirmedBooking'
 import Home from './components/Home'
 import Footer from './components/Layout/Footer'
 import Nav from './components/Layout/Nav'
@@ -34,10 +35,9 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route
           path='/booking'
-          element={
-            <BookingPage availableTimes={availableTimes} />
-          }
+          element={<BookingPage availableTimes={availableTimes} />}
         />
+        <Route path='/booking-confirm' element={<ConfirmedBooking />} />
       </Routes>
       <Footer />
     </BrowserRouter>

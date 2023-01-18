@@ -6,7 +6,7 @@
 
 body {
   /* background-color: #181a1b; */
-  color: #e8e6e3;
+  /* color: #e8e6e3; */
   font-family: 'Markazi Text', sans-serif;
   /* font-family: 'Karla', sans-serif; */
   /* margin: 3rem 5%; */
@@ -264,6 +264,7 @@ footer img {
 }
 
 .content h5 {
+  color: #e8e6e3;
   font-size: 1rem;
   padding-top: 0.8rem;
   width: 61%;
@@ -378,6 +379,7 @@ footer img {
 }
 
 footer p {
+  color: #e8e6e3;
   border-color: rgb(123, 114, 101);
   border-top: #333333;
   border-style: solid;
