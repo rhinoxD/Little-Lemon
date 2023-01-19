@@ -6,7 +6,7 @@ import header from '../../assets/Logo.svg'
 const Header = () => {
   return (
     <header>
-      <Link to='/'>
+      <Link to='/' aria-label='On Click'>
         <img src={header} alt='header-logo' />
       </Link>
     </header>

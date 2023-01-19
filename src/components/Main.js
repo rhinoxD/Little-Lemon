@@ -19,7 +19,9 @@ const Main = () => {
             traditional recipes served with a modern twist.
           </h5>
           <button className='btn'>
-            <Link to='/booking'>Reserve a Table</Link>
+            <Link to='/booking' aria-label='On Click'>
+              Reserve a Table
+            </Link>
           </button>
         </div>
         <div className='content-image'>
@@ -29,7 +31,7 @@ const Main = () => {
       <div className='specials'>
         <div className='heading'>
           <h1>This weeks specials!</h1>
-          <button>Online Menu</button>
+          <button aria-label='On Click'>Online Menu</button>
         </div>
         <div className='cards'>
           <div className='one'>
@@ -48,7 +50,7 @@ const Main = () => {
               </p>
             </div>
             <div className='card-btn'>
-              <button>
+              <button aria-label='On Click'>
                 Order a delivery
                 <span>
                   <img src={scooter} alt='' />
