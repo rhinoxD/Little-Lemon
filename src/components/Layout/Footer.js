@@ -17,19 +17,19 @@ const Footer = () => {
                   <Link to='/home'>Home</Link>
                 </li>
                 <li className='footer-nav-item'>
-                  <Link to='/home'>About</Link>
+                  <Link to='/about'>About</Link>
                 </li>
                 <li className='footer-nav-item'>
-                  <Link to='/home'>Menu</Link>
+                  <Link to='/menu'>Menu</Link>
                 </li>
                 <li className='footer-nav-item'>
-                  <Link to='/home'>Reservations</Link>
+                  <Link to='/reservations'>Reservations</Link>
                 </li>
                 <li className='footer-nav-item'>
-                  <Link to='/home'>Order Online</Link>
+                  <Link to='/order-online'>Order Online</Link>
                 </li>
                 <li className='footer-nav-item'>
-                  <Link to='/home'>Login</Link>
+                  <Link to='/login'>Login</Link>
                 </li>
               </ul>
             </div>

@@ -1,16 +1,21 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
-import header from '../../assets/Logo.svg'
+import Nav from './Nav'
 
-const Header = () => {
-  return (
-    <header>
-      <Link to='/' aria-label='On Click'>
-        <img src={header} alt='header-logo' />
-      </Link>
-    </header>
-  )
-}
+import './Layout.css'
+
+const Header = () => (
+  <header>
+    <div className='container'>
+      <div className='header-content flex'>
+        <Link to='/'>
+          <img src='assets/images/Logo.svg' alt='logo' />
+        </Link>
+
+        <Nav />
+      </div>
+    </div>
+  </header>
+)
 
 export default Header

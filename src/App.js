@@ -7,7 +7,7 @@ import BookingPage from './components/BookingPage'
 import ConfirmedBooking from './components/ConfirmedBooking'
 import Home from './components/Home'
 import Footer from './components/Layout/Footer'
-import Nav from './components/Layout/Nav'
+import Header from './components/Layout/Header'
 import Login from './components/Login'
 import Menu from './components/Menu'
 import OrderOnline from './components/OrderOnline'
@@ -25,7 +25,7 @@ function App() {
   ])
   return (
     <BrowserRouter>
-      <Nav />
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
