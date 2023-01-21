@@ -1,6 +1,3 @@
-import { useState } from 'react'
-
-import contentImage from '../assets/restauranfood.jpg'
 import greekSalad from '../assets/greek salad.jpg'
 import bruschetta from '../assets/bruchetta.svg'
 import lemonDessert from '../assets/lemon dessert.jpg'
@@ -10,24 +7,29 @@ import { Link } from 'react-router-dom'
 const Main = () => {
   return (
     <main>
-      <div className='hero'>
-        <div className='content'>
-          <h1>Little Lemon</h1>
-          <h3>Chicago</h3>
-          <h5>
-            We are a family owned Mediterranean restaurant, focused on
-            traditional recipes served with a modern twist.
-          </h5>
-          <button className='btn'>
-            <Link to='/booking' aria-label='On Click'>
-              Reserve a Table
-            </Link>
-          </button>
+      <section id='hero-banner' className='hero-banner'>
+        <div className='container flex hero-container'>
+          <div className='hero-content'>
+            <h1 className='hero-title'>Little Lemon</h1>
+            <h4 className='hero-subtitle'>Chicago</h4>
+            <p className='hero-description'>
+              We are family owned mediterranean restaurant, focussed on
+              traditional recipes served with modern twist.
+            </p>
+            <button className='button'>
+              <Link to='/booking' aria-label='On Click'>
+                Reserve a Table
+              </Link>
+            </button>
+          </div>
+          <img
+            src='assets/images/hero.jpg'
+            alt='hero banner'
+            className='hero-image'
+          />
         </div>
-        <div className='content-image'>
-          <img src={contentImage} alt='restaurant-food' />
-        </div>
-      </div>
+      </section>
+
       <div className='specials'>
         <div className='heading'>
           <h1>This weeks specials!</h1>
