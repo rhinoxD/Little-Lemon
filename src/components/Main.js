@@ -101,6 +101,62 @@ const Main = () => {
           </div>
         </div>
       </section>
+
+      <section id='testmonials-section' className='testimonials-section'>
+        <div className='container'>
+          <h2>Testimonials</h2>
+
+          <div className='grid testimonials-grid'>
+            <div className='testimonials-card'>
+              <div className='testimonials-rating'>Rating: 5</div>
+
+              <div className='testmonial-user'>
+                <img
+                  src='/assets/images/avatar.png'
+                  alt='avatar'
+                  style={{ height: '150px', width: '150px' }}
+                />
+                <div className='testimonials-name'>Julia J.</div>
+              </div>
+
+              <div className='testimonials-description'>
+                Man, this thing is getting better and better as I learn more
+                about it. Your company is truly upstanding and is behind its
+                product 100%. I didn't even need training.
+              </div>
+            </div>
+
+            <div className='testimonials-card'>
+              <div className='testimonials-rating'>Rating: 4</div>
+
+              <div className='testmonial-user'>
+                <img src='/assets/images/avatar2.jpg' alt='avatar2' />
+                <div className='testimonials-name'>Raquel O.</div>
+              </div>
+
+              <div className='testimonials-description'>
+                I love your system. Little lemon restaurant is worth much more
+                than I paid. I am really satisfied with my Little lemon
+                restaurant.
+              </div>
+            </div>
+
+            <div className='testimonials-card'>
+              <div className='testimonials-rating'>Rating: 5</div>
+
+              <div className='testmonial-user'>
+                <img src='/assets/images/avatar3.webp' alt='avatar3' />
+                <div className='testimonials-name'>Mollie I.</div>
+              </div>
+
+              <div className='testimonials-description'>
+                Little lemon restaurant was the best investment I ever made.
+                Thanks guys, keep up the good work! It's really wonderful.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

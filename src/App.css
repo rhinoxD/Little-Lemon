@@ -143,13 +143,63 @@
   }
   .specials .specials-heading {
     margin-top: 10rem;
-    background: #000;
   }
   .specials .specials-grid {
     grid-template-columns: repeat(1, 1fr);
   }
   .specials-card img {
     max-height: initial;
+  }
+}
+
+/* Testimonials */
+.testimonials-section {
+  margin: 4rem 0;
+  padding: 3rem 0;
+  background: var(--bg-primary);
+  color: var(--white);
+}
+
+.testimonials-section h2 {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.testimonials-section .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonials-card .testmonial-user {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.testimonials-card img {
+  max-width: 150px;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.testimonials-card .testimonials-description {
+  font-weight: 400;
+  font-size: 14px;
+  max-width: 400px;
+}
+
+@media (max-width: 1024px) {
+  .testimonials-section .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section .testimonials-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -233,69 +283,6 @@ label {
   margin: 0.5rem 0 1rem;
   color: var(--danger);
   font-size: 0.8rem;
-}
-
-/* Footer */
-footer {
-  background-color: var(--bg-primary);
-}
-
-footer img {
-  width: 10%;
-  height: 10%;
-}
-
-footer .container {
-  display: flex;
-  flex-direction: column;
-}
-
-footer .footer-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-footer .footer-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  width: 80%;
-}
-
-footer .footer-nav-column {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-footer .footer-nav-column h3 {
-  color: #e8e6e3;
-}
-
-footer ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  font-weight: normal;
-  margin: 0.4rem 0.2rem;
-}
-
-footer ul a {
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-footer li {
-  margin: 0;
-}
-
-footer .copyright {
-  text-align: center;
-  color: #e8e6e3;
-  padding-bottom: 2rem;
 }
 
 @media (max-width: 1024px) {

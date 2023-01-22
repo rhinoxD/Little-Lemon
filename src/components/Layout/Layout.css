@@ -72,6 +72,10 @@ footer {
   gap: 2rem;
 }
 
+.footer-content img {
+  width: 50%;
+}
+
 .footer-nav {
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
@@ -88,13 +92,16 @@ footer {
 }
 
 footer .copyright {
-  margin-top: 3rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
 @media (max-width: 1024px) {
   footer img {
     display: none;
+  }
+  footer .copyright {
+    margin-top: 0;
   }
 }
 
