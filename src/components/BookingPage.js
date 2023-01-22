@@ -1,31 +1,16 @@
-import React, { useEffect, useReducer } from 'react'
 import BookingForm from './BookingForm'
 
-const BookingPage = ({ availableTimes, setAvailableTimes }) => {
-  const updateTimes = (state, action) => {
-    console.log(state)
-    console.log(action)
-    state = availableTimes.filter(function (item) {
-      return item !== action.type
-    })
-    return state
-  }
-  // const initializeTimes = async () => {
-  //   const fetchAPI = await fetch(
-  //     'https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js'
-  //   )
-  //   // const data = await fetchAPI(new Date())
-  //   console.log(fetchAPI)
-  // }
-  // initializeTimes()
-  // useEffect(() => {
-  //   initializeTimes()
-  // }, [initializeTimes])
-  const [state, dispatch] = useReducer(updateTimes, availableTimes)
+const BookingPage = ({ availableTimes, setAvailableTimes, submitForm }) => {
   return (
-    <div>
-      <BookingForm availableTimes={state} dispatch={dispatch} />
-    </div>
+    <section id='booking' className='booking-section'>
+      <div className='container booking-container flex'>
+        <BookingForm
+          availableTimes={availableTimes}
+          setAvailableTimes={setAvailableTimes}
+          submitForm={submitForm}
+        />
+      </div>
+    </section>
   )
 }
 

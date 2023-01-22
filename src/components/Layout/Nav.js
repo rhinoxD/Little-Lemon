@@ -59,7 +59,7 @@ export const Nav = () => {
         </li>
         <li>
           <Link
-            to='/reservations'
+            to='/booking'
             onClick={() => setShowNav(false)}
             aria-label='On Click'
           >

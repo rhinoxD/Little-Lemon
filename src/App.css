@@ -203,6 +203,48 @@
   }
 }
 
+/* Booking Form  */
+.booking-header {
+  font-size: 56px;
+  margin: 3rem 0;
+  line-height: 0.8;
+}
+
+.booking-section .booking-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-section form {
+  width: 100%;
+  max-width: 500px;
+}
+
+.booking-section button {
+  margin: 1.5rem 0;
+}
+
+/* Confirmation */
+.confirmation-section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 30vh;
+}
+
+.confirmation-section h1 {
+  font-size: 56px;
+  margin-top: 3rem;
+  line-height: 0.8;
+}
+
+.confirmation-section a:hover {
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
 /* Button */
 .button {
   display: inline-block;

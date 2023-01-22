@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { useReducer } from 'react'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
 import './App.css'
 import About from './components/About'
@@ -12,19 +12,47 @@ import Login from './components/Login'
 import Menu from './components/Menu'
 import OrderOnline from './components/OrderOnline'
 import Reservations from './components/Reservations'
+import { fetchAPI, submitAPI } from './API'
+
+export const initializeTimes = () => {
+  const data = fetchAPI(new Date())
+
+  return data.map((item) => ({ value: item, label: item }))
+}
+
+export const updateTimes = (state, action) => {
+  switch (action.type) {
+    case 'DATE_CHANGE':
+      const data = fetchAPI(new Date(action.payload))
+      return data.map((item) => ({ value: item, label: item }))
+
+    case 'ADD_BOOKING':
+      return state.filter((time) => time.value !== action.payload)
+
+    default:
+      return state
+  }
+}
 
 function App() {
-  const [availableTimes, setAvailableTimes] = useState([
-    'Select a time...',
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00',
-  ])
+  const navigate = useNavigate()
+
+  const [availableTimes, setAvailableTimes] = useReducer(
+    updateTimes,
+    initializeTimes()
+  )
+
+  const submitForm = (formData) => {
+    setAvailableTimes({
+      type: 'ADD_BOOKING',
+      payload: formData.time,
+    })
+
+    const response = submitAPI(formData)
+    if (response) navigate('/booking-confirm')
+  }
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -35,12 +63,18 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route
           path='/booking'
-          element={<BookingPage availableTimes={availableTimes} />}
+          element={
+            <BookingPage
+              availableTimes={availableTimes}
+              setAvailableTimes={setAvailableTimes}
+              submitForm={submitForm}
+            />
+          }
         />
         <Route path='/booking-confirm' element={<ConfirmedBooking />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </>
   )
 }
 
